@@ -282,9 +282,9 @@
     if (indexPath) {
         RETableViewCell *cell = (RETableViewCell *)[self.parentTableView cellForRowAtIndexPath:indexPath];
         if (!cell)
-            [self.parentTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            [self.parentTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
         cell = (RETableViewCell *)[self.parentTableView cellForRowAtIndexPath:indexPath];
-        [self.responder resignFirstResponder];
+        //[self.responder resignFirstResponder];
         [cell.responder becomeFirstResponder];
     }
     if (self.item.actionBarNavButtonTapHandler)
